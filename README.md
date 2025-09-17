@@ -18,7 +18,7 @@ calculator-project/
 │ ├── App.java # 실행 진입점
 │ ├── ArithmeticCalculator.java # 제네릭 계산기 클래스
 │ └── OperatorType.java # 사칙연산 Enum 정의
-├── out/ # 컴파일된 클래스 파일 (자동 생성)
+└── out/ # 컴파일된 클래스 파일 (자동 생성)
 
 yaml
 코드 복사
