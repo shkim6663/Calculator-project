@@ -2,6 +2,11 @@
 계산기를 만들어보자!
 
 
+##프로젝트 영상
+[![YouTube Video](https://img.youtube.com/vi/QuezFEhj8Wo/0.jpg)](https://youtu.be/QuezFEhj8Wo?si=wsDnkwcKvNhqpfj0)
+
+
+
 ## 프로젝트 소개
 Java로 구현한 사칙연산 계산기 프로젝트입니다.  
 - 기본적인 사칙연산 수행  
