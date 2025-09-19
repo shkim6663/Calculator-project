@@ -48,4 +48,10 @@ public class ArithmeticCalculator<T extends Number> {
             System.out.println("삭제할 결과가 없습니다.");
         }
     }
+
+    public List<Double> findResultsGreaterThan(double value) {
+        return results.stream()
+                .filter(r -> r > value)
+                .collect(Collectors.toList());
+    }
 }
