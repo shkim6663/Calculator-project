@@ -2,6 +2,7 @@ package calculator;
 
 import java.util.Scanner;
 
+
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,24 +17,29 @@ public class App {
             System.out.print("두 번째 숫자를 입력하세요: ");
             double num2 = sc.nextDouble();
 
-            System.out.print("연산 기호를 입력하세요 (+, -, *, /): ");
-            char op = sc.next().charAt(0);
+            System.out.print("사칙연산 기호를 입력하세요 (+, -, *, /): ");
+            char operatorChar = sc.next().charAt(0);
+            OperatorType operator = OperatorType.fromChar(operatorChar);
 
-            try {
-                OperatorType operator = OperatorType.fromChar(op);
-                double result = calculator.calculate(num1, num2, operator);
+            double result = calculator.calculate(num1, num2, operator);
+            if (!Double.isNaN(result)) {
                 System.out.println("결과: " + result);
+            }
 
-                System.out.print("임계값을 입력하세요 (이 값보다 큰 결과 출력): ");
-                double threshold = sc.nextDouble();
-                calculator.printResultsGreaterThan(threshold);
+            System.out.println("저장된 결과 목록: " + calculator.getResults());
 
-                // 추가 기능 실행
-                calculator.printResultsLessThan(threshold);
+            System.out.print("가장 오래된 결과를 삭제하시겠습니까? (y/n): ");
+            String remove = sc.next();
+            if (remove.equalsIgnoreCase("y")) {
                 calculator.removeResult();
+            }
 
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
+            System.out.print("특정 값보다 큰 결과를 조회하시겠습니까? (y/n): ");
+            String search = sc.next();
+            if (search.equalsIgnoreCase("y")) {
+                System.out.print("기준 값을 입력하세요: ");
+                double value = sc.nextDouble();
+                System.out.println("조회 결과: " + calculator.findResultsGreaterThan(value));
             }
         }
 
