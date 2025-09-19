@@ -2,11 +2,10 @@
 계산기를 만들어보자!
 
 
-##프로젝트 영상
 
+## 프로젝트 영상 소개
+[![계산기 프로젝트](https://img.youtube.com/vi/3HAixv5cLw8/0.jpg)](https://youtu.be/3HAixv5cLw8?si=liLhAGp9k0HHFapu)
 
-
-[![YouTube Video](https://img.youtube.com/vi/QuezFEhj8Wo/0.jpg)](https://youtu.be/QuezFEhj8Wo?si=wsDnkwcKvNhqpfj0)
 
 
 
