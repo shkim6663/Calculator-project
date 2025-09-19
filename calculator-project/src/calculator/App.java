@@ -34,15 +34,25 @@ public class App {
                 calculator.removeResult();
             }
 
-            System.out.print("특정 값보다 큰 결과를 조회하시겠습니까? (y/n): ");
+            System.out.print("특정 값보다 큰/작은 결과를 조회하시겠습니까? (y/n): ");
             String search = sc.next();
             if (search.equalsIgnoreCase("y")) {
+                System.out.print("조회 조건을 선택하세요 (greater/less): ");
+                String condition = sc.next();
+
                 System.out.print("기준 값을 입력하세요: ");
                 double value = sc.nextDouble();
-                System.out.println("조회 결과: " + calculator.findResultsGreaterThan(value));
+
+                if (condition.equalsIgnoreCase("greater")) {
+                    System.out.println("조회 결과(큰 값): " + calculator.findResultsGreaterThan(value));
+                } else if (condition.equalsIgnoreCase("less"))
+                    System.out.println("조회 결과(작은 값): " + calculator.findResultsLessThan(value));
+                else {
+                    System.out.println("잘못된 조건을 입력했습니다.");
+                }
+
+                System.out.println("계산기를 종료합니다.");
             }
         }
-
-        System.out.println("계산기를 종료합니다.");
     }
 }
