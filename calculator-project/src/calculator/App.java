@@ -30,7 +30,7 @@ public class App {
 
                 // 추가 기능 실행
                 calculator.printResultsLessThan(threshold);
-                calculator.printAverage();
+                calculator.removeResult();
 
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
