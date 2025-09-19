@@ -39,13 +39,13 @@ public class ArithmeticCalculator<T extends Number> {
         System.out.println("저장된 결과 중 " + threshold + " 보다 작은 값: " + filtered);
     }
 
-    // (추가 기능) 결과 전체 평균 출력
-    public void printAverage() {
-        double avg = results.stream()
-                .mapToDouble(Double::doubleValue)
-                .average()
-                .orElse(Double.NaN);
-
-        System.out.println("저장된 결과들의 평균: " + avg);
+    // (추가 기능) 가장 오래된 결과 삭제기능
+    public void removeResult() {
+        if (!results.isEmpty()) {
+            results.remove(0);
+            System.out.println("가장 오래된 결과가 삭제되었습니다.");
+        } else {
+            System.out.println("삭제할 결과가 없습니다.");
+        }
     }
 }
